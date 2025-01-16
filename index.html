@@ -136,6 +136,27 @@ body {
     background-attachment: fixed;
 }
 
+@media (min-width: 768px) {
+    .coming-soon-text {
+        padding-top: 0px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .coming-soon-text {
+        padding-top: 50px;
+        text-align: center;
+    }
+}
+
+.coming-soon-text {
+        font-size: 24px;
+        font-weight: 100;
+        color: rgba(0, 0, 0, 0.8);
+
+}
+
 </style>
 
 
@@ -143,10 +164,11 @@ body {
 <body>
 <!-- partial:index.partial.html -->
 
-    <h3 class="fade-in two align-items-center justify-content-center" style="padding-top: 100px; text-align: center;">
+    <h3 class="fade-in two align-items-center coming-soon-text justify-content-center">
         <img src="./img/billsign.png" class="logo fade-in one" style="max-width: 240px; width: 40%;">
-        <p style="padding-top: 10px;">
+        <p class="coming-soon-text">
             Em breve 💚
+        </p>
     </h3>
 
 <div class="content-area d-flex align-items-center justify-content-center">
