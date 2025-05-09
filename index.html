@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Bill Sign</title>
-      <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name='description' content='Enter Real Lotto syndicates for Free at Lotto Lout. Includes Powerball, Euromillions, Eurojackpot and many more worldwide lotteries.'>
-    <meta name="keywords" content="Lotto, Lottery, Syndicates, Results, Free,Powerball,Eurojackpot,Megamillions,Euromillions">
-  	<meta name="author" content="Aecor Digital">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel='canonical' href='/'>
-    <!-- inject:head:html -->
-    <link rel="apple-touch-icon" sizes="57x57" href="./img/favicons/apple-icon-57x57.png">
+  <title>Selfit.IA - Seu personal trainer e nutricionista inteligente</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name='description' content='Selfit.IA - Seu personal trainer, nutricionista e organizador de treinos inteligente. Transforme sua saúde e forma física com a ajuda da inteligência artificial.'>
+  <meta name="keywords" content="Personal Trainer, Nutricionista, IA, Inteligência Artificial, Treinos, Fitness, Saúde, Bem-estar">
+  <meta name="author" content="Selfit.IA">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel='canonical' href='/'>
+  <!-- inject:head:html -->
+  <link rel="apple-touch-icon" sizes="57x57" href="./img/favicons/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="./img/favicons/apple-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="./img/favicons/apple-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="76x76" href="./img/favicons/apple-icon-76x76.png">
@@ -28,161 +28,448 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="./img/favicons/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-    <!-- endinject -->
-    <meta property='og:type' content='website' />
-    <meta property='og:url' content='/' />
-    <meta property='og:title' content='BillSign – Intermediações de Pagamentos' />
-    <meta property='og:description' content='Serviço de intermediação de pagamentos com segurança e eficiência.' />
-    <meta property="og:site_name" content="BillSign" />
-    <meta property='og:image' content='./img/banner/banner.png' />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="BillSign splash image" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name='twitter:card' content='summary_large_image'>
-    <meta name='twitter:domain' value='' />
-    <meta name='twitter:title' value='BillSign – Intermediações de Pagamentos' />
-    <meta name='twitter:description' value='Serviço de intermediação de pagamentos com segurança e eficiência.' />
-    <meta name='twitter:image' content='./img/banner/banner.png' />
-    <meta name='twitter:url' value='/' /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <!-- endinject -->
+  <meta property='og:type' content='website' />
+  <meta property='og:url' content='/' />
+  <meta property='og:title' content='Selfit.IA - Seu personal trainer e nutricionista inteligente' />
+  <meta property='og:description' content='Transforme sua saúde e forma física com a ajuda da inteligência artificial. Personal, nutricionista e organizador de treinos em um só lugar.' />
+  <meta property="og:site_name" content="Selfit.IA" />
+  <meta property='og:image' content='./img/banner/banner.png' />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Selfit.IA splash image" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name='twitter:card' content='summary_large_image'>
+  <meta name='twitter:domain' value='' />
+  <meta name='twitter:title' value='Selfit.IA - Seu personal trainer e nutricionista inteligente' />
+  <meta name='twitter:description' value='Transforme sua saúde e forma física com a ajuda da inteligência artificial. Personal, nutricionista e organizador de treinos em um só lugar.' />
+  <meta name='twitter:image' content='./img/banner/banner.png' />
+  <meta name='twitter:url' value='/' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-  /* make keyframes that tell the start state and the end state of our object */
+  /* Estilos Gerais */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('./img/bruce-mars.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 60px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Animações */
   @-webkit-keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
+  
   @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
+
   .fade-in {
     opacity: 0;
-    /* make things invisible upon start */
     -webkit-animation: fadeIn ease-in 1;
-    /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
     animation: fadeIn ease-in 1;
     -webkit-animation-fill-mode: forwards;
-    /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
     animation-fill-mode: forwards;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
   }
+
   .fade-in.one {
-    -webkit-animation-delay: 0.7s;
-    animation-delay: 0.7s;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
   }
+
   .fade-in.two {
-    -webkit-animation-delay: 1.2s;
-    animation-delay: 1.2s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
   }
+
   .fade-in.three {
-    -webkit-animation-delay: 1.7s;
-    animation-delay: 1.7s;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
   }
-  
+
+  /* Seção Principal */
+  .hero-section {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .logo-container {
+    margin-bottom: 1.5rem;
+  }
+
   .logo {
-    max-width: 480px;
-    width: 80%;
+    max-width: 180px;
+    width: 100%;
     display: block;
     margin: 0 auto;
+    transition: transform 0.3s ease;
   }
-  
-  h3 {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    letter-spacing: 5px;
+
+  .logo:hover {
+    transform: scale(1.05);
+  }
+
+  .main-heading {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #4b5563;
+    font-weight: 400;
+  }
+
+  /* Recursos */
+  .features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .feature {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    width: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature i {
+    font-size: 2rem;
+    color: #6366f1;
+  }
+
+  .feature span {
+    font-weight: 500;
+    text-align: center;
+  }
+
+  /* Contador */
+  .countdown-container {
+    margin-bottom: 3rem;
+  }
+
+  .coming-soon-text {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+  }
+
+  #countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .countdown-item {
+    background: linear-gradient(145deg, #6366f1, #8b5cf6);
+    color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    min-width: 90px;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+  }
+
+  .countdown-item span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .countdown-item p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.9;
+  }
+
+  /* Formulário de Newsletter */
+  .newsletter-container {
+    margin-bottom: 2.5rem;
+  }
+
+  .newsletter-container h3 {
+    font-size: 1.2rem;
     text-transform: uppercase;
-    font-weight: 100;
-    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    color: #4b5563;
+    font-weight: 600;
   }
-  
+
+  #newsletter-form {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 0.5rem;
+  }
+
+  #newsletter-form input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  #newsletter-form input:focus {
+    border-color: #6366f1;
+  }
+
+  #newsletter-form button {
+    background: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  #newsletter-form button:hover {
+    background: #4f46e5;
+  }
+
+  /* Ícones de Redes Sociais */
+  .social {
+    margin-bottom: 2rem;
+  }
+
   .social ul {
+    display: flex;
+    justify-content: center;
     list-style-type: none;
-    padding: 0;
+    gap: 1.5rem;
   }
-  .social ul li {
+
+  .social ul li a {
+    color: #6366f1;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
     display: inline-block;
-    margin: 5px;
   }
-  .social ul li a img {
-    width: 28px;
+
+  .social ul li a:hover {
+    color: #4f46e5;
+    transform: scale(1.2);
   }
-  .social ul li a img:hover {
-    opacity: 0.7;
-  }
-  
+
+  /* Rodapé */
   .copy-right {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #6b7280;
     position: absolute;
     bottom: 0;
-    right: 0;
-    left: 0;
-    text-align: center;
-    padding-bottom: 15px;
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.5);
+    width: 100%;
   }
 
-body {
-    background: url('./img/bruce-mars.gif') no-repeat center center fixed;
-    background-size: contain;
-    background-attachment: fixed;
-}
-
-@media (min-width: 768px) {
-    .coming-soon-text {
-        padding-top: 0px;
-        text-align: center;
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .main-heading {
+      font-size: 2.5rem;
     }
-}
 
-@media (max-width: 767px) {
-    .coming-soon-text {
-        padding-top: 50px;
-        text-align: center;
+    .tagline {
+      font-size: 1.2rem;
     }
-}
 
-.coming-soon-text {
-        font-size: 24px;
-        font-weight: 100;
-        color: rgba(0, 0, 0, 0.8);
+    .features-container {
+      gap: 1rem;
+    }
 
-}
+    .feature {
+      width: 150px;
+      padding: 1rem;
+    }
 
+    #countdown {
+      gap: 0.8rem;
+    }
+
+    .countdown-item {
+      min-width: 70px;
+      padding: 0.8rem;
+    }
+
+    .countdown-item span {
+      font-size: 1.8rem;
+    }
+
+    #newsletter-form {
+      flex-direction: column;
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .features-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .feature {
+      width: 200px;
+    }
+
+    .countdown-item {
+      min-width: 60px;
+      padding: 0.6rem;
+    }
+
+    .countdown-item span {
+      font-size: 1.5rem;
+    }
+  }
 </style>
-
-
 </head>
 <body>
-<!-- partial:index.partial.html -->
-
-    <h3 class="fade-in two align-items-center coming-soon-text justify-content-center">
-        <img src="./img/billsign.png" class="logo fade-in one" style="max-width: 240px; width: 40%;">
-        <p class="coming-soon-text">
-            Em breve 💚
-        </p>
-    </h3>
-
-<div class="content-area d-flex align-items-center justify-content-center">
-	<div>
-        <div class="content-area d-flex align-items-center justify-content-center">
-            <div>
-            </div>
+  <div class="container">
+    <div class="hero-section fade-in one">
+      <!-- <div class="logo-container">
+        <img src="./img/billsign.png" alt="Selfit.IA Logo" class="logo">
+      </div> -->
+      <h1 class="main-heading">Selfit.IA</h1>
+      <h2 class="tagline">Seu personal trainer e nutricionista inteligente</h2>
+      <div class="features-container fade-in two">
+        <div class="feature">
+          <i class="fas fa-dumbbell"></i>
+          <span>Personal Trainer IA</span>
         </div>
-	</div>
-</div>
-<div class="copy-right">
-	&copy; Desenvolvido por Leonardo Ribeiro. 2025
-</div>
-<!-- partial -->
-  
+        <div class="feature">
+          <i class="fas fa-apple-alt"></i>
+          <span>Planos Nutricionais</span>
+        </div>
+        <div class="feature">
+          <i class="fas fa-calendar-check"></i>
+          <span>Organizador de Treinos</span>
+        </div>
+        <div class="feature">
+          <i class="fas fa-bell"></i>
+          <span>Lembretes Personalizados</span>
+        </div>
+        <div class="feature">
+          <i class="fas fa-chart-line"></i>
+          <span>Relatórios Detalhados</span>
+        </div>
+      </div>
+      <div class="countdown-container fade-in three">
+        <p class="coming-soon-text">Em breve transformaremos sua jornada fitness</p>
+        <div id="countdown">
+          <div class="countdown-item">
+            <span id="days">00</span>
+            <p>Dias</p>
+          </div>
+          <div class="countdown-item">
+            <span id="hours">00</span>
+            <p>Horas</p>
+          </div>
+          <div class="countdown-item">
+            <span id="minutes">00</span>
+            <p>Minutos</p>
+          </div>
+          <div class="countdown-item">
+            <span id="seconds">00</span>
+            <p>Segundos</p>
+          </div>
+        </div>
+      </div>
+      <div class="newsletter-container fade-in three">
+        <h3>Transformando sua jornada fitness com inteligência e simplicidade.</h3>
+      </div>
+      <div class="social fade-in three">
+        <ul>
+          <p>Mais um produto criado por <a href="https://www.instagram.com/codeandscale/" target="_blank"><b>Leonardo Ribeiro.</b></a></p>
+          <!-- <li><a href="#"><i class="fab fa-instagram"></i></a></li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="copy-right">
+    &copy; Selfit.IA. Todos os direitos reservados. 2025
+  </div>
+
+  <script>
+    // Configurar data de lançamento (2 meses a partir de hoje)
+    const launchDate = new Date();
+    launchDate.setDate(launchDate.getDate() + 7);
+    
+    // Atualizar contador regressivo
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+      
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+      document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+    }
+    
+    // Atualizar a cada segundo
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+    
+    // Formulário de newsletter
+    document.getElementById("newsletter-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Obrigado por se inscrever! Enviaremos novidades em breve.");
+      this.reset();
+    });
+  </script>
 </body>
 </html>
