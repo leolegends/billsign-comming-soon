@@ -314,14 +314,14 @@
     width: 100%;
   }
 
-  /* Botão de ação para o Beta */
+  /* Botão de ação para o Beta - Novo estilo AI */
   .beta-button-container {
     margin: 2rem 0;
   }
 
   .beta-button {
     display: inline-block;
-    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
     color: white;
     text-decoration: none;
     padding: 1rem 2rem;
@@ -334,6 +334,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
+    border: 2px solid transparent;
   }
 
   .beta-button:before {
@@ -349,8 +350,9 @@
   }
 
   .beta-button:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.03);
     box-shadow: 0 10px 25px rgba(99, 102, 241, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
   }
 
   .beta-button:hover:before {
@@ -366,19 +368,121 @@
     transform: translateX(5px);
   }
 
-  .pulse {
-    animation: pulse 2s infinite;
+  /* Novas animações para o botão de IA */
+  .ai-pulse {
+    position: relative;
+    animation: aiPulse 2.5s infinite;
   }
 
-  @keyframes pulse {
+  @keyframes aiPulse {
     0% {
       box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
     }
-    70% {
+    50% {
       box-shadow: 0 0 0 15px rgba(99, 102, 241, 0);
     }
     100% {
       box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+    }
+  }
+
+  .ai-button-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    position: relative;
+  }
+
+  .ai-button-icon:before, .ai-button-icon:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.8;
+  }
+
+  .ai-button-icon:before {
+    width: 8px;
+    height: 8px;
+    animation: aiIconPulse 1.5s infinite alternate;
+  }
+
+  .ai-button-icon:after {
+    width: 4px;
+    height: 4px;
+    animation: aiIconMove 2s infinite;
+  }
+
+  @keyframes aiIconPulse {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+
+  @keyframes aiIconMove {
+    0% {
+      transform: translateX(-5px) translateY(-5px);
+    }
+    25% {
+      transform: translateX(5px) translateY(-5px);
+    }
+    50% {
+      transform: translateX(5px) translateY(5px);
+    }
+    75% {
+      transform: translateX(-5px) translateY(5px);
+    }
+    100% {
+      transform: translateX(-5px) translateY(-5px);
+    }
+  }
+
+  .ai-text-effect {
+    position: relative;
+    display: inline-block;
+  }
+
+  .ai-text-effect::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+
+  .beta-button:hover .ai-text-effect::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .ai-glow {
+    animation: aiGlow 5s infinite alternate;
+  }
+
+  @keyframes aiGlow {
+    0% {
+      filter: drop-shadow(0 0 5px rgba(147, 197, 253, 0.5));
+    }
+    50% {
+      filter: drop-shadow(0 0 12px rgba(147, 197, 253, 0.8));
+    }
+    100% {
+      filter: drop-shadow(0 0 5px rgba(147, 197, 253, 0.5));
     }
   }
 
@@ -510,8 +614,9 @@
       </div>
       
       <div class="beta-button-container fade-in three">
-        <a href="https://t.me/SelfitIA_bot" target="_blank" class="beta-button pulse">
-          Experimente agora o Beta <i class="fas fa-arrow-right"></i>
+        <a href="https://t.me/SelfitIA_bot" target="_blank" class="beta-button ai-pulse ai-glow">
+          <span class="ai-text-effect">Experimente agora o Beta</span>
+          <span class="ai-button-icon"></span>
         </a>
       </div>
       
