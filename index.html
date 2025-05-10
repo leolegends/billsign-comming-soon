@@ -150,6 +150,175 @@
     font-weight: 400;
   }
 
+  /* Features Section - Atualizado */
+  .features-section {
+    padding: 3rem 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    margin: 0 auto 3rem auto;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #4338ca;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  .feature-card {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+  }
+
+  .feature-content {
+    padding: 1.5rem 2rem;
+    text-align: left;
+  }
+
+  .feature-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #4338ca;
+  }
+
+  .feature-description {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
+  .feature-number {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: white;
+    font-weight: 700;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(99, 102, 241, 0.3);
+    z-index: 1;
+  }
+
+  /* Seção Por Que Escolher */
+  .why-choose-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .why-choose-heading {
+    font-size: 2rem;
+    color: #4338ca;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+  }
+
+  .why-choose-heading::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  .benefits-list {
+    list-style-type: none;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
+  }
+
+  .benefit-item:hover {
+    transform: translateX(5px);
+  }
+
+  .benefit-icon {
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  .benefit-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #4b5563;
+    text-align: left;
+  }
+
   /* Recursos */
   .features-container {
     display: flex;
@@ -486,20 +655,32 @@
     }
   }
 
-  /* Responsividade para o botão */
-  @media (max-width: 768px) {
-    .beta-button {
-      font-size: 1rem;
-      padding: 0.8rem 1.8rem;
-    }
+  /* Divider estilizado */
+  .divider {
+    width: 100%;
+    max-width: 150px;
+    margin: 2rem auto;
+    position: relative;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #6366f1, transparent);
+    border-radius: 2px;
+    overflow: hidden;
   }
 
-  @media (max-width: 480px) {
-    .beta-button {
-      font-size: 0.9rem;
-      padding: 0.7rem 1.5rem;
-      width: 80%;
-    }
+  .divider::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    top: 0;
+    left: -40px;
+    animation: dividerShine 3s infinite;
+  }
+
+  @keyframes dividerShine {
+    0% { left: -40px; }
+    100% { left: 100%; }
   }
 
   /* Responsividade */
@@ -538,6 +719,25 @@
       flex-direction: column;
       width: 90%;
     }
+
+    .feature-card {
+      flex-direction: column;
+    }
+
+    .feature-icon {
+      min-width: auto;
+      padding: 1rem;
+    }
+
+    .feature-number {
+      top: 10px;
+      left: 10px;
+    }
+
+    .section-title,
+    .why-choose-heading {
+      font-size: 1.8rem;
+    }
   }
 
   @media (max-width: 480px) {
@@ -558,6 +758,27 @@
     .countdown-item span {
       font-size: 1.5rem;
     }
+
+    .feature-title {
+      font-size: 1.2rem;
+    }
+
+    .feature-content {
+      padding: 1rem;
+    }
+
+    .benefit-item {
+      padding: 0.8rem;
+    }
+
+    .benefit-icon {
+      min-width: 32px;
+      height: 32px;
+    }
+
+    .benefit-text {
+      font-size: 0.9rem;
+    }
   }
 </style>
 </head>
@@ -568,31 +789,91 @@
         <img src="./img/billsign.png" alt="Selfit.IA Logo" class="logo">
       </div> -->
       <h1 class="main-heading">Selfit.IA</h1>
-      <h2 class="tagline">Seu personal trainer e nutricionista inteligente</h2>
-      <div class="features-container fade-in two">
-        <div class="feature">
-          <i class="fas fa-dumbbell"></i>
-          <span>Personal Trainer IA</span>
+      <h2 class="tagline">Descubra o Poder do Seu Treinador Pessoal Inteligente!</h2>
+
+      <!-- Seção de Recursos -->
+      <div class="features-section fade-in two">
+        <h2 class="section-title">Recursos que Transformarão sua Rotina</h2>
+        
+        <div class="feature-card">
+          <div class="feature-number">1</div>
+          <div class="feature-icon">
+            <i class="fas fa-dumbbell"></i>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">📋 Monte seu Treino Perfeito em Segundos!</h3>
+            <p class="feature-description">Crie treinos personalizados para atingir seus objetivos, seja ganho de massa, emagrecimento ou melhorar a performance. Salve, acompanhe e receba notificações para não deixar passar nenhum dia!</p>
+          </div>
         </div>
-        <div class="feature">
-          <i class="fas fa-apple-alt"></i>
-          <span>Planos Nutricionais</span>
+        
+        <div class="feature-card">
+          <div class="feature-number">2</div>
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">📅 Resumo Semanal: Veja Seu Progresso!</h3>
+            <p class="feature-description">Acompanhe tudo o que você fez (ou deixou de fazer!) durante a semana com um relatório simples e motivador. O progresso nunca foi tão claro!</p>
+          </div>
         </div>
-        <div class="feature">
-          <i class="fas fa-calendar-check"></i>
-          <span>Organizador de Treinos</span>
+        
+        <div class="feature-card">
+          <div class="feature-number">3</div>
+          <div class="feature-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">🏋️‍♂️ Tá Pago? Bora Registrar!</h3>
+            <p class="feature-description">Terminou o treino? O Selfit te envia uma notificação: "Tá Pago?". Registre com um simples "Sim" ou "Não" e veja como anda sua consistência ao longo do tempo.</p>
+          </div>
         </div>
-        <div class="feature">
-          <i class="fas fa-bell"></i>
-          <span>Lembretes Personalizados</span>
+        
+        <div class="feature-card">
+          <div class="feature-number">4</div>
+          <div class="feature-icon">
+            <i class="fas fa-apple-alt"></i>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">🍎 Crie Dietas Sob Medida: Simples, Rápido e do Seu Jeito!</h3>
+            <p class="feature-description">Escolha os alimentos que você gosta e monte sua dieta personalizada em menos de 1 minuto. Depois, receba um PDF completo com tudo explicado pra facilitar seu dia a dia.</p>
+          </div>
         </div>
-        <div class="feature">
-          <i class="fas fa-chart-line"></i>
-          <span>Relatórios Detalhados</span>
+        
+        <div class="feature-card">
+          <div class="feature-number">5</div>
+          <div class="feature-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">💪 Aprenda a Treinar com GIFs Ilustrativos!</h3>
+            <p class="feature-description">Tá com dúvida no exercício? Pergunte! O Selfit te ensina com GIFs animados e dicas práticas. Treinar nunca foi tão divertido e didático.</p>
+          </div>
         </div>
       </div>
+
+      <div class="divider"></div>
+
+      <!-- Seção Por Que Escolher -->
+      <div class="why-choose-section fade-in three">
+        <h2 class="why-choose-heading">Por Que o Selfit.IA é pra Você?</h2>
+        <ul class="benefits-list">
+          <li class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-brain"></i></div>
+            <span class="benefit-text">Inteligente e Personalizado: Ele se adapta 100% às suas necessidades.</span>
+          </li>
+          <li class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-bolt"></i></div>
+            <span class="benefit-text">Simples de Usar: Foco no que importa, sem enrolação.</span>
+          </li>
+          <li class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-trophy"></i></div>
+            <span class="benefit-text">Motivador: Porque a gente sabe que o mais difícil é continuar.</span>
+          </li>
+        </ul>
+      </div>
+
       <div class="countdown-container fade-in three">
-        <p class="coming-soon-text">Em breve transformaremos sua jornada fitness</p>
+        <p class="coming-soon-text">Chega de complicar sua rotina. Veja a diferença em:</p>
         <div id="countdown">
           <div class="countdown-item">
             <span id="days">00</span>
@@ -670,7 +951,7 @@
     updateCountdown();
     
     // Formulário de newsletter
-    document.getElementById("newsletter-form").addEventListener("submit", function(e) {
+    document.getElementById("newsletter-form")?.addEventListener("submit", function(e) {
       e.preventDefault();
       alert("Obrigado por se inscrever! Enviaremos novidades em breve.");
       this.reset();
