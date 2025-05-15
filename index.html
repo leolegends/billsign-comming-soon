@@ -64,6 +64,18 @@
       <!-- Área de saudação personalizada -->
       <div id="greeting-area"></div>
 
+      <!-- Demonstração de chat principal -->
+      <div class="chat-demo-container fade-in two" id="main-chat-demo">
+        <div class="chat-demo-header">
+          <div class="bot-avatar"><i class="fas fa-robot"></i></div>
+          <div class="bot-name">Selfit.IA</div>
+        </div>
+        <div class="chat-demo-body" id="main-chat-body"></div>
+        <div class="chat-input">
+          <div class="chat-input-field">Digite sua mensagem...</div>
+        </div>
+      </div>
+
       <!-- Seção de Recursos -->
       <div class="features-section fade-in two">
         <h2 class="section-title">Recursos que Transformarão sua Rotina</h2>
@@ -79,6 +91,18 @@
           </div>
         </div>
         
+        <!-- Chat demo para treinos -->
+        <div class="chat-demo-container" id="treino-chat-demo">
+          <div class="chat-demo-header">
+            <div class="bot-avatar"><i class="fas fa-robot"></i></div>
+            <div class="bot-name">Selfit.IA</div>
+          </div>
+          <div class="chat-demo-body" id="treino-chat-body"></div>
+          <div class="chat-input">
+            <div class="chat-input-field">Digite sua mensagem...</div>
+          </div>
+        </div>
+        
         <div class="feature-card">
           <div class="feature-number">2</div>
           <div class="feature-icon">
@@ -87,6 +111,18 @@
           <div class="feature-content">
             <h3 class="feature-title">📅 Resumo Semanal: Veja Seu Progresso!</h3>
             <p class="feature-description">Acompanhe tudo o que você fez (ou deixou de fazer!) durante a semana com um relatório simples e motivador. O progresso nunca foi tão claro!</p>
+          </div>
+        </div>
+        
+        <!-- Chat demo para resumo semanal -->
+        <div class="chat-demo-container" id="resumo-chat-demo">
+          <div class="chat-demo-header">
+            <div class="bot-avatar"><i class="fas fa-robot"></i></div>
+            <div class="bot-name">Selfit.IA</div>
+          </div>
+          <div class="chat-demo-body" id="resumo-chat-body"></div>
+          <div class="chat-input">
+            <div class="chat-input-field">Digite sua mensagem...</div>
           </div>
         </div>
         
@@ -112,6 +148,18 @@
           </div>
         </div>
         
+        <!-- Chat demo para dietas -->
+        <div class="chat-demo-container" id="dieta-chat-demo">
+          <div class="chat-demo-header">
+            <div class="bot-avatar"><i class="fas fa-robot"></i></div>
+            <div class="bot-name">Selfit.IA</div>
+          </div>
+          <div class="chat-demo-body" id="dieta-chat-body"></div>
+          <div class="chat-input">
+            <div class="chat-input-field">Digite sua mensagem...</div>
+          </div>
+        </div>
+        
         <div class="feature-card">
           <div class="feature-number">5</div>
           <div class="feature-icon">
@@ -120,6 +168,18 @@
           <div class="feature-content">
             <h3 class="feature-title">💪 Aprenda a Treinar com GIFs Ilustrativos!</h3>
             <p class="feature-description">Tá com dúvida no exercício? Pergunte! O Selfit te ensina com GIFs animados e dicas práticas. Treinar nunca foi tão divertido e didático.</p>
+          </div>
+        </div>
+        
+        <!-- Chat demo para exercícios -->
+        <div class="chat-demo-container" id="exercicio-chat-demo">
+          <div class="chat-demo-header">
+            <div class="bot-avatar"><i class="fas fa-robot"></i></div>
+            <div class="bot-name">Selfit.IA</div>
+          </div>
+          <div class="chat-demo-body" id="exercicio-chat-body"></div>
+          <div class="chat-input">
+            <div class="chat-input-field">Digite sua mensagem...</div>
           </div>
         </div>
       </div>
@@ -310,6 +370,158 @@
         greetingContainer.appendChild(greetingText);
         greetingArea.appendChild(greetingContainer);
       }
+    });
+
+    // Definição de chats simulados
+    const chatConversations = {
+      'main': [
+        { role: 'user', text: 'Oi Selfit, pode criar um treino completo semanal?' },
+        { role: 'bot', text: 'Sim, claro! Me fale um pouco mais sobre seus objetivos. Você quer ganhar massa, perder peso ou melhorar a resistência?' }
+      ],
+      'treino': [
+        { role: 'user', text: 'Quero um treino para ganhar massa muscular!' },
+        { role: 'bot', text: 'Ótimo! Vou criar um treino ABC focado em hipertrofia, com 4 treinos por semana e descanso estratégico. Você tem alguma limitação física que eu deva considerar?' },
+        { role: 'user', text: 'Tenho um pouco de desconforto no joelho' },
+        { role: 'bot', text: 'Entendi! Vou adaptar os exercícios para minimizar o impacto nos joelhos. Vou substituir agachamentos livres por leg press e incluir exercícios de fortalecimento para a região.' }
+      ],
+      'resumo': [
+        { role: 'user', text: 'Como foi meu desempenho essa semana?' },
+        { role: 'bot', text: 'Você treinou 4 de 5 dias programados (80%)! Melhorou 15% no supino e completou todos os exercícios de costas. Continue assim! 💪' }
+      ],
+      'dieta': [
+        { role: 'user', text: 'Preciso de um plano alimentar para perder 5kg' },
+        { role: 'bot', text: 'Vamos criar isso! Quais alimentos você mais gosta? E tem algum que você não come ou tem alergia?' },
+        { role: 'user', text: 'Gosto de frango, arroz e vegetais. Não como peixe.' },
+        { role: 'bot', text: 'Perfeito! Vou montar um plano de 1800 calorias com suas preferências, dividido em 6 refeições para manter seu metabolismo ativo. Enviarei o PDF em seguida!' }
+      ],
+      'exercicio': [
+        { role: 'user', text: 'Como fazer o supino corretamente?' },
+        { role: 'bot', text: 'Vou te mostrar! Primeiro, deite no banco com pés no chão e escápulas retraídas. Pegue a barra com mãos um pouco mais abertas que a largura dos ombros. Inspire e desça a barra controladamente até tocar levemente o peito. Expire ao empurrar de volta. Veja o GIF demonstrativo 👆' }
+      ]
+    };
+
+    // Função para simular digitação e mostrar mensagens
+    function simulateTyping(chatId, conversations) {
+      const chatBody = document.getElementById(`${chatId}-chat-body`);
+      const chatContainer = document.getElementById(`${chatId}-chat-demo`);
+      if (!chatBody || !chatContainer) return;
+      
+      let messageIndex = 0;
+      let charIndex = 0;
+      
+      // Mostrar o contêiner de chat
+      function showChat() {
+        chatContainer.classList.add('visible');
+      }
+      
+      // Criar indicador de digitação
+      function createTypingIndicator() {
+        const typingIndicator = document.createElement('div');
+        typingIndicator.className = 'typing-indicator';
+        typingIndicator.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+        return typingIndicator;
+      }
+      
+      // Adicionar mensagem ao chat
+      function addMessageToChat(message, isUser) {
+        const messageEl = document.createElement('div');
+        messageEl.className = `chat-message ${isUser ? 'user-message' : 'bot-message'}`;
+        messageEl.textContent = '';
+        chatBody.appendChild(messageEl);
+        
+        setTimeout(() => {
+          messageEl.classList.add('visible');
+        }, 100);
+        
+        return messageEl;
+      }
+      
+      // Simular digitação de caractere por caractere
+      function typeText(element, text, callback) {
+        let i = 0;
+        const speed = 20 + Math.random() * 50;
+        
+        function type() {
+          if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+          } else {
+            if (callback) callback();
+          }
+        }
+        
+        type();
+      }
+      
+      // Processar próxima mensagem
+      function processNextMessage() {
+        if (messageIndex >= conversations.length) {
+          return;
+        }
+        
+        const conversation = conversations[messageIndex];
+        const isUser = conversation.role === 'user';
+        
+        // Se for bot, mostrar indicador de digitação primeiro
+        let typingIndicator;
+        if (!isUser) {
+          typingIndicator = createTypingIndicator();
+          chatBody.appendChild(typingIndicator);
+          
+          // Aguardar um pouco antes de começar a "digitar" a resposta
+          setTimeout(() => {
+            if (typingIndicator && typingIndicator.parentNode) {
+              chatBody.removeChild(typingIndicator);
+            }
+            
+            const messageEl = addMessageToChat(conversation.text, isUser);
+            
+            typeText(messageEl, conversation.text, () => {
+              messageIndex++;
+              
+              // Aguardar um pouco entre as mensagens
+              setTimeout(processNextMessage, 1000);
+            });
+          }, 1500);
+        } else {
+          // Mensagem do usuário, mostrar imediatamente
+          const messageEl = addMessageToChat(conversation.text, isUser);
+          
+          typeText(messageEl, conversation.text, () => {
+            messageIndex++;
+            
+            // Avançar para a próxima mensagem (resposta do bot) após um breve atraso
+            setTimeout(processNextMessage, 500);
+          });
+        }
+      }
+      
+      // Iniciar o chat quando estiver visível no viewport
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            showChat();
+            setTimeout(processNextMessage, 500);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      
+      observer.observe(chatContainer);
+    }
+
+    // Iniciar todos os chats simulados quando o DOM estiver pronto
+    document.addEventListener('DOMContentLoaded', function() {
+      // Iniciar a saudação personalizada
+      // Código existente da saudação...
+      
+      // Iniciar os chats simulados
+      simulateTyping('main', chatConversations.main);
+      simulateTyping('treino', chatConversations.treino);
+      simulateTyping('resumo', chatConversations.resumo);
+      simulateTyping('dieta', chatConversations.dieta);
+      simulateTyping('exercicio', chatConversations.exercicio);
     });
   </script>
 </body>
