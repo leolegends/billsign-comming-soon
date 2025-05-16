@@ -1,0 +1,228 @@
+/* Estilos da Newsletter e Rodapé */
+
+/* Newsletter Container */
+.newsletter-container {
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  margin: 3rem 0;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.newsletter-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--dark);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.newsletter-content p {
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* App Badges */
+.app-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.app-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.telegram-badge {
+  background: #0088cc;
+  color: white;
+}
+
+.telegram-badge:hover {
+  background: #0077b5;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 136, 204, 0.2);
+}
+
+.soon-badge {
+  background: #f3f4f6;
+  color: #6b7280;
+  border: 1px dashed #d1d5db;
+}
+
+.soon-badge:hover {
+  background: #e5e7eb;
+  transform: translateY(-3px);
+}
+
+.app-badge i {
+  font-size: 1.2rem;
+}
+
+/* Rodapé */
+.social {
+  background: white;
+  padding: 2rem 0;
+  border-radius: 16px 16px 0 0;
+  margin-top: 2rem;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  width: 100%;
+}
+
+.copy-right {
+  background: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--gray);
+  width: 100%;
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.social p {
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+.social a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social a:hover {
+  color: var(--secondary);
+}
+
+.social li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #f3f4f6;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social li a:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social li i {
+  font-size: 1.2rem;
+}
+
+.copy-right {
+  background: white;
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  margin-top: 0.8rem;
+}
+
+.footer-links a {
+  color: var(--primary);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .newsletter-container {
+    padding: 2rem 1.5rem;
+  }
+  
+  .newsletter-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .app-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .app-badge {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Melhorias no rodapé */
+@media (max-width: 992px) {
+  .social {
+    padding: 1.5rem 0;
+  }
+  
+  .copy-right {
+    padding: 1rem 0;
+    font-size: 0.85rem;
+  }
+  
+  .footer-links {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social {
+    margin-top: 1rem;
+    padding: 1rem 0;
+  }
+  
+  .social ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .social p {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+  }
+}

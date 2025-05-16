@@ -46,16 +46,19 @@
   <meta name='twitter:image' content='./img/banner/banner.png' />
   <meta name='twitter:url' value='/' />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/trainer-section.css">
+  <link rel="stylesheet" href="./css/modern-styles.css">
+  <link rel="stylesheet" href="./css/form-styles.css">
+  <link rel="stylesheet" href="./css/footer-styles.css">
+  <link rel="stylesheet" href="./css/chat-styles.css">
+  <link rel="stylesheet" href="./css/responsive.css">
 </head>
 <body>
   <div class="container">
     <div class="hero-section fade-in one">
-      <!-- <div class="logo-container">
-        <img src="./img/billsign.png" alt="Selfit.IA Logo" class="logo">
-      </div> -->
       <h1 class="main-heading">Selfit.IA</h1>
       <h2 class="tagline">
         Descubra o Poder do Seu Treinador Pessoal Inteligente!
@@ -187,7 +190,7 @@
       <div class="divider"></div>
 
       <!-- Seção Por Que Escolher -->
-      <div class="why-choose-section fade-in three">
+      <div class="features-section fade-in two">
         <h2 class="why-choose-heading">Por Que o Selfit.IA é pra Você?</h2>
         <ul class="benefits-list">
           <li class="benefit-item">
@@ -202,11 +205,15 @@
             <div class="benefit-icon"><i class="fas fa-trophy"></i></div>
             <span class="benefit-text">Motivador: Porque a gente sabe que o mais difícil é continuar.</span>
           </li>
+            <li class="benefit-item">
+              <div class="benefit-icon"><i class="fas fa-mobile-alt"></i></div>
+              <span class="benefit-text">Acompanhamento em Tempo Real: Receba feedbacks, dicas e lembretes diretamente no seu celular, onde estiver.</span>
+            </li>
         </ul>
       </div>
 
       <!-- Seção Habilidades da IA -->
-      <div class="skills-section fade-in three">
+      <div class="features-section fade-in three">
         <h2 class="skills-title"><i class="fas fa-robot"></i> Habilidades da IA Selfit</h2>
         <div class="skills-cards">
           <div class="skill-card">
@@ -244,90 +251,208 @@
         </div>
       </div>
 
-      <div class="countdown-container fade-in three">
-        <p class="coming-soon-text">Chega de complicar sua rotina. Veja a diferença em:</p>
-        <div id="countdown">
-          <div class="countdown-item">
-            <span id="days">00</span>
-            <p>Dias</p>
-          </div>
-          <div class="countdown-item">
-            <span id="hours">00</span>
-            <p>Horas</p>
-          </div>
-          <div class="countdown-item">
-            <span id="minutes">00</span>
-            <p>Minutos</p>
-          </div>
-          <div class="countdown-item">
-            <span id="seconds">00</span>
-            <p>Segundos</p>
-          </div>
+      <div class="launch-announcement fade-in three">
+        <div class="announcement-badge">
+          <i class="fas fa-rocket"></i> Lançado!
+        </div>
+        <h3 class="announcement-title">O Selfit.IA já está disponível!</h3>
+        <p class="announcement-text">Descubra como a inteligência artificial pode revolucionar sua rotina de treino e alimentação, trazendo resultados de forma prática e personalizada.</p>
+      </div>
+      
+      <div class="stats-container fade-in three">
+        <div class="stat-item">
+          <div class="stat-value"><i class="fas fa-utensils"></i> +400</div>
+          <div class="stat-label">Dietas Personalizadas Criadas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value"><i class="fas fa-dumbbell"></i> +500</div>
+          <div class="stat-label">Treinos Planejados com Sucesso</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value"><i class="fas fa-chalkboard-teacher"></i> +2000</div>
+          <div class="stat-label">Variações de treinos</div>
         </div>
       </div>
       
       <div class="beta-button-container fade-in three">
         <a href="https://t.me/SelfitIA_bot" target="_blank" class="beta-button ai-pulse ai-glow">
-          <span class="ai-text-effect">Experimente agora o Beta</span>
-          <span class="ai-button-icon"></span>
+          <span class="ai-text-effect">Experimente Agora</span>
+          <i class="fas fa-rocket ai-button-icon"></i>
         </a>
       </div>
       
       <div class="newsletter-container fade-in three">
-        <h3>Transformando sua jornada fitness com inteligência e simplicidade.</h3>
+        <div class="newsletter-content">
+          <h3>Transformando sua jornada fitness com inteligência e simplicidade</h3>
+          <p>Junte-se a centenas de pessoas que já estão transformando sua saúde com o Selfit.IA.</p>
+        </div>
+      </div
+
+      <!-- Seção para Personal Trainers -->
+      <div class="trainer-section fade-in three highlight-offer">
+        <h2 class="section-title">
+          <span class="new-badge">NOVIDADE</span> Para Personal Trainers e Nutricionistas
+        </h2>
+        <div class="trainer-content">
+          <div class="trainer-info">
+            <h3 class="trainer-heading">Ganhe Mais com o Selfit.IA Whitelabel!</h3>
+            <p class="trainer-description">
+              É personal trainer ou nutricionista? Agora você pode usar o <b>Selfit.IA</b> de forma <b>whitelabel</b>: seus alunos pagam diretamente para você, e você só paga a licença do Selfit.IA. <br>
+              <span class="highlight-text">Aumente sua renda, escale seu atendimento e ofereça tecnologia de ponta com sua própria marca!</span>
+            </p>
+            <div class="trainer-features">
+              <div class="trainer-feature-item">
+                <div class="trainer-feature-icon"><i class="fas fa-users"></i></div>
+                <div class="trainer-feature-text">Atenda mais alunos sem aumentar sua carga de trabalho</div>
+              </div>
+              <div class="trainer-feature-item">
+                <div class="trainer-feature-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="trainer-feature-text">Receba análises e relatórios automáticos de resultados</div>
+              </div>
+              <div class="trainer-feature-item">
+                <div class="trainer-feature-icon"><i class="fas fa-file-alt"></i></div>
+                <div class="trainer-feature-text">Crie treinos e dietas personalizados em minutos</div>
+              </div>
+              <div class="trainer-feature-item">
+                <div class="trainer-feature-icon"><i class="fas fa-comment-dots"></i></div>
+                <div class="trainer-feature-text">Automatize o contato e suporte aos seus alunos 24/7</div>
+              </div>
+              <div class="trainer-feature-item">
+                <div class="trainer-feature-icon"><i class="fas fa-money-bill-wave"></i></div>
+                <div class="trainer-feature-text"><b>Lucre mais:</b> você define o valor para seus alunos e paga apenas a licença do Selfit.IA</div>
+              </div>
+              <div class="trainer-feature-item">
+                <div class="trainer-feature-icon"><i class="fas fa-star"></i></div>
+                <div class="trainer-feature-text">Destaque-se no mercado com tecnologia exclusiva e inovadora</div>
+              </div>
+            </div>
+            <div class="trainer-cta">
+              <a href="https://t.me/leolegends" target="_blank" class="trainer-button pulse-offer">
+                Quero minha oferta Whitelabel <i class="fas fa-arrow-right"></i>
+              </a>
+              <div class="offer-note">
+                <i class="fas fa-bolt"></i> Vagas limitadas para os primeiros profissionais!
+              </div>
+            </div>
+          </div>
+          <div class="trainer-image">
+            <div class="trainer-image-container">
+              <i class="fas fa-dumbbell trainer-icon-large floating"></i>
+              <i class="fas fa-brain trainer-icon-medium floating"></i>
+              <i class="fas fa-plus trainer-icon-small floating"></i>
+              <span class="whitelabel-tag">Whitelabel</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="social fade-in three">
-        <ul>
-          <p>Mais um produto criado por <a href="https://www.instagram.com/codeandscale/" target="_blank"><b>Leonardo Ribeiro.</b></a></p>
-          <!-- <li><a href="#"><i class="fab fa-instagram"></i></a></li> -->
-        </ul>
+      
+      <!-- Formulário para Personal Trainers -->
+      <div id="contato-profissional" class="contact-form-section fade-in three">
+        <h3 class="contact-form-title">
+          <i class="fas fa-handshake"></i> Quero usar o Selfit.IA em meu negócio
+        </h3>
+        <div class="form-intro">
+          <p>Preencha o formulário abaixo e nossa equipe entrará em contato para explicar como você pode utilizar o Selfit.IA com sua marca e expandir seu negócio.</p>
+        </div>
+        <form id="trainer-contact-form" class="trainer-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="trainer-name">Nome completo</label>
+              <input type="text" id="trainer-name" name="trainer-name" placeholder="Seu nome completo" required>
+              <div id="trainer-name-error" class="error-message"></div>
+            </div>
+            <div class="form-group">
+              <label for="trainer-email">E-mail profissional</label>
+              <input type="email" id="trainer-email" name="trainer-email" placeholder="seu@email.com" required>
+              <div id="trainer-email-error" class="error-message"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="trainer-phone">Telefone</label>
+              <input type="tel" id="trainer-phone" name="trainer-phone" placeholder="(00) 00000-0000" required>
+              <div id="trainer-phone-error" class="error-message"></div>
+            </div>
+            <div class="form-group">
+              <label for="trainer-specialty">Área de atuação</label>
+              <select id="trainer-specialty" name="trainer-specialty" required>
+                <option value="" disabled selected>Selecione sua área</option>
+                <option value="personal">Personal Trainer</option>
+                <option value="nutri">Nutricionista</option>
+                <option value="physio">Fisioterapeuta</option>
+                <option value="coach">Coach Esportivo</option>
+                <option value="gym">Academia/Studio</option>
+                <option value="other">Outro</option>
+              </select>
+              <div id="trainer-specialty-error" class="error-message"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="trainer-message">Como pretende utilizar o Selfit.IA?</label>
+            <textarea id="trainer-message" name="trainer-message" rows="4" placeholder="Conte-nos sobre seus objetivos profissionais e como podemos ajudar"></textarea>
+            <div id="trainer-message-error" class="error-message"></div>
+          </div>
+          <div class="form-privacy">
+            <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+            <label for="privacy-policy">Concordo com a <a href="#">Política de Privacidade</a> e com o envio de informações sobre o Selfit.IA</label>
+            <div id="privacy-policy-error" class="error-message"></div>
+          </div>
+          <button type="submit" class="trainer-submit-button">
+            <span>Enviar Solicitação</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
       </div>
+
     </div>
   </div>
+
+  <div class="social fade-in three">
+    <ul>
+      <p>Mais um produto criado por <a href="https://www.instagram.com/codeandscale/" target="_blank"><b>Leonardo Ribeiro</b></a></p>
+      <li><a href="https://www.instagram.com/codeandscale/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="https://t.me/leolegends" target="_blank"><i class="fab fa-telegram"></i></a></li>
+    </ul>
+  </div>
+      
   <div class="copy-right">
-    &copy; Selfit.IA. Todos os direitos reservados. 2025
+    &copy; Selfit.IA. Todos os direitos reservados. 2023-2024
+    <div class="footer-links">
+      <a href="#">Termos de Uso</a> | 
+      <a href="#">Política de Privacidade</a>
+    </div>
   </div>
 
   <script>
-    // Configurar data de lançamento (2 meses a partir de hoje)
-    // Configurar data de lançamento para 09/05/2025 13:00h
-    const launchDate = new Date('2025-05-18T18:00:00');
-    
-    // Atualizar contador regressivo
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
-      
-      // Se já passou da data de lançamento
-      if (distance < 0) {
-      document.getElementById("days").innerHTML = "00";
-      document.getElementById("hours").innerHTML = "00";
-      document.getElementById("minutes").innerHTML = "00";
-      document.getElementById("seconds").innerHTML = "00";
-      return;
-      }
-      
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      
-      document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-      document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-      document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-      document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
-    }
-    
-    // Atualizar a cada segundo
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-    
     // Formulário de newsletter
     document.getElementById("newsletter-form")?.addEventListener("submit", function(e) {
       e.preventDefault();
       alert("Obrigado por se inscrever! Enviaremos novidades em breve.");
       this.reset();
     });
+
+    // Função para aplicar máscara de telefone
+    function aplicarMascaraTelefone(input) {
+      let valor = input.value.replace(/\D/g, '');
+      
+      if (valor.length > 11) {
+        valor = valor.substring(0, 11);
+      }
+      
+      // Formata o número conforme a quantidade de dígitos
+      if (valor.length > 10) {
+        // Formato para celular: (99) 99999-9999
+        valor = valor.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+      } else if (valor.length > 6) {
+        // Formato para telefone fixo: (99) 9999-9999
+        valor = valor.replace(/^(\d{2})(\d{4})(\d{0,4})$/, '($1) $2-$3');
+      } else if (valor.length > 2) {
+        // Apenas DDD: (99)
+        valor = valor.replace(/^(\d{2})(\d{0,5})$/, '($1) $2');
+      }
+      
+      input.value = valor;
+    }
 
     // Função para obter parâmetros da URL
     function getUrlParameter(name) {
@@ -523,6 +648,147 @@
       simulateTyping('dieta', chatConversations.dieta);
       simulateTyping('exercicio', chatConversations.exercicio);
 
+      // Formulário de contato para profissionais
+      const trainerForm = document.getElementById('trainer-contact-form');
+      const phoneInput = document.getElementById('trainer-phone');
+      
+      // Função para validar o formulário
+      function validarFormulario() {
+        let isValid = true;
+        const campos = [
+          { id: 'trainer-name', mensagem: 'Nome é obrigatório' },
+          { id: 'trainer-email', mensagem: 'E-mail é obrigatório e deve ser válido', 
+            validar: (valor) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor) },
+          { id: 'trainer-phone', mensagem: 'Telefone é obrigatório', 
+            validar: (valor) => valor.replace(/\D/g, '').length >= 10 },
+          { id: 'trainer-specialty', mensagem: 'Selecione sua área de atuação' },
+          { id: 'trainer-message', mensagem: 'Mensagem é obrigatória' }
+        ];
+        
+        // Limpar erros anteriores
+        document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
+        document.querySelectorAll('.error-message').forEach(el => el.classList.remove('visible'));
+        
+        // Validar cada campo
+        campos.forEach(campo => {
+          const elemento = document.getElementById(campo.id);
+          const valor = elemento.value.trim();
+          const errorElement = document.getElementById(`${campo.id}-error`);
+          
+          let campoInvalido = valor === '';
+          
+          if (!campoInvalido && campo.validar) {
+            campoInvalido = !campo.validar(valor);
+          }
+          
+          if (campoInvalido) {
+            isValid = false;
+            elemento.classList.add('input-error');
+            
+            if (errorElement) {
+              errorElement.innerText = campo.mensagem;
+              errorElement.classList.add('visible');
+            }
+          }
+        });
+        
+        // Validar aceite da política
+        const privacyAccepted = document.getElementById('privacy-policy').checked;
+        const privacyError = document.getElementById('privacy-policy-error');
+        
+        if (!privacyAccepted) {
+          isValid = false;
+          document.getElementById('privacy-policy').classList.add('input-error');
+          
+          if (privacyError) {
+            privacyError.innerText = 'Você precisa aceitar a política de privacidade';
+            privacyError.classList.add('visible');
+          }
+        }
+        
+        return isValid;
+      }
+      
+      // Aplicar máscara de telefone aos eventos de input
+      if (phoneInput) {
+        phoneInput.addEventListener('input', function() {
+          aplicarMascaraTelefone(this);
+        });
+        
+        // Aplicar máscara também no evento de blur (quando o campo perde o foco)
+        phoneInput.addEventListener('blur', function() {
+          aplicarMascaraTelefone(this);
+        });
+        
+        // Aplicar máscara no carregamento, caso já tenha algum valor
+        aplicarMascaraTelefone(phoneInput);
+      }
+      
+      if (trainerForm) {
+        trainerForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Validar formulário antes de enviar
+          if (!validarFormulario()) {
+            return;
+          }
+          
+          const name = document.getElementById('trainer-name').value;
+          const email = document.getElementById('trainer-email').value;
+          const phone = document.getElementById('trainer-phone').value.replace(/\D/g, ''); // Remove caracteres não numéricos
+          const specialty = document.getElementById('trainer-specialty').value;
+          const message = document.getElementById('trainer-message').value;
+          const privacy = document.getElementById('privacy-policy').checked;
+          
+          // Dados para enviar para a API
+          const data = {
+            nome: name,
+            email: email,
+            telefone: phone,
+            area_atuacao: specialty,
+            como_pretende_usar: message,
+            aceite: privacy
+          };
+          
+          // Mostrar indicador de carregamento
+          const submitBtn = trainerForm.querySelector('button[type="submit"]');
+          const originalBtnText = submitBtn.innerHTML;
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+          submitBtn.disabled = true;
+          
+          // Enviar dados para a API
+          fetch('https://workflow.billsign.app/webhook/b8c31146-a691-460c-8941-ee4d5bbca5bb', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+              // Adicione o token de autorização se necessário
+              // 'Authorization': 'Bearer seu-token-aqui'
+            },
+            body: JSON.stringify(data)
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Falha no envio. Por favor, tente novamente.');
+            }
+            return response.json();
+          })
+          .then(responseData => {
+            // Sucesso
+            alert(`Obrigado, ${name}! Sua solicitação foi recebida com sucesso. Entraremos em contato em breve.`);
+            trainerForm.reset();
+          })
+          .catch(error => {
+            // Erro
+            console.error('Erro ao enviar formulário:', error);
+            alert('Ocorreu um erro ao enviar seu formulário. Por favor, tente novamente ou entre em contato diretamente pelo Telegram.');
+          })
+          .finally(() => {
+            // Restaurar botão
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+          });
+        });
+      }
     });
   </script>
 </body>

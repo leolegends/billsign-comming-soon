@@ -1,0 +1,345 @@
+/* Estilos para a seção de Personal Trainers e Nutricionistas */
+
+/* Seção principal */
+.trainer-section {
+  /*margin: 5rem 0;*/
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-offer {
+  background: linear-gradient(rgba(59, 130, 246, 0.8), rgba(139, 92, 246, 0.8)), 
+              url('../img/trainer-bg.jpg') no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Badge de novidade */
+.new-badge {
+  display: inline-block;
+  background: #ff4757;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-right: 10px;
+  animation: pulse 2s infinite;
+  text-transform: uppercase;
+  vertical-align: middle;
+  letter-spacing: 1px;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 71, 87, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 71, 87, 0);
+  }
+}
+
+/* Título e conteúdo */
+.trainer-section .section-title {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.trainer-section .section-title:after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background: white;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.trainer-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  color: white;
+}
+
+.trainer-info {
+  flex: 2;
+}
+
+.trainer-heading {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+.trainer-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  color: white;
+
+}
+
+.highlight-text {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+  border-left: 4px solid #ffd60a;
+}
+
+/* Features grid */
+.trainer-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.trainer-feature-item {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1.2rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.trainer-feature-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.trainer-feature-icon {
+  font-size: 1.5rem;
+  color: #ffd60a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trainer-feature-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white;
+}
+
+/* CTA Button */
+.trainer-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.trainer-button {
+  display: inline-block;
+  background: #ffd60a;
+  color: #333;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+}
+
+.trainer-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background: #ffe234;
+}
+
+.trainer-button .fas {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.trainer-button:hover .fas {
+  transform: translateX(5px);
+}
+
+/* Pulse animation for CTA button */
+.pulse-offer {
+  animation: pulse-button 2s infinite;
+}
+
+@keyframes pulse-button {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 214, 10, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(255, 214, 10, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 214, 10, 0);
+  }
+}
+
+.offer-note {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+}
+
+.offer-note .fas {
+  color: #ffd60a;
+  margin-right: 5px;
+}
+
+/* Right side image */
+.trainer-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trainer-image-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 20px;
+}
+
+.trainer-icon-large {
+  font-size: 6rem;
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+}
+
+.trainer-icon-medium {
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 20%;
+  right: 25%;
+}
+
+.trainer-icon-small {
+  font-size: 2rem;
+  color: #ffd60a;
+  position: absolute;
+  bottom: 25%;
+  left: 30%;
+}
+
+/* Floating animation for icons */
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.trainer-icon-medium.floating {
+  animation-delay: 0.5s;
+}
+
+.trainer-icon-small.floating {
+  animation-delay: 1s;
+}
+
+/* Whitelabel tag */
+.whitelabel-tag {
+  position: absolute;
+  bottom: 10%;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #3b82f6;
+  font-weight: 700;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .trainer-content {
+    flex-direction: column;
+  }
+  
+  .trainer-image {
+    margin-top: 2rem;
+  }
+  
+  .trainer-features {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .trainer-section {
+    padding: 2rem 1rem;
+  }
+  
+  .trainer-section .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .trainer-heading {
+    font-size: 1.5rem;
+  }
+  
+  .trainer-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .trainer-image-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .trainer-icon-large {
+    font-size: 4rem;
+  }
+  
+  .trainer-icon-medium {
+    font-size: 2.5rem;
+  }
+  
+  .trainer-icon-small {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,438 @@
+/* Estilos para a Seção de Anúncio de Lançamento */
+.launch-announcement {
+  background: linear-gradient(135deg, #4f46e5, #7e22ce);
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 900px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+}
+
+.launch-announcement::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+  animation: pulse 4s infinite linear;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+}
+
+.announcement-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-badge i {
+  margin-right: 0.5rem;
+  color: #ffdd00;
+}
+
+.announcement-title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.announcement-text {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Estilos para a Seção de Estatísticas */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+  max-width: 900px;
+}
+
+.stat-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  min-width: 180px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  bottom: 0;
+  left: 0;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat-value i {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* Estilos para a Seção de Personal Trainers */
+.trainer-section {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+  margin: 3rem auto;
+  max-width: 1000px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.trainer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.trainer-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.trainer-heading {
+  font-size: 1.8rem;
+  color: #4338ca;
+  margin-bottom: 1rem;
+}
+
+.trainer-description {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.trainer-features {
+  margin-bottom: 2rem;
+}
+
+.trainer-feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.trainer-feature-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  border-radius: 50%;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.trainer-feature-text {
+  flex: 1;
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.trainer-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trainer-image-container {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.2);
+}
+
+.trainer-icon-large {
+  font-size: 7rem;
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+}
+
+.trainer-icon-medium {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.trainer-icon-small {
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 60px;
+  bottom: 60px;
+}
+
+.trainer-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  border: none;
+  cursor: pointer;
+}
+
+.trainer-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.5);
+}
+
+/* Estilos para o Formulário de Contato */
+.contact-form-section {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+  margin: 3rem auto;
+  max-width: 800px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form-title {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #4338ca;
+  margin-bottom: 2rem;
+}
+
+.trainer-form {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.trainer-submit-button {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.trainer-submit-button:hover {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* Media Queries para as novas seções */
+@media (max-width: 768px) {
+  .launch-announcement {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .announcement-title {
+    font-size: 1.8rem;
+  }
+
+  .announcement-text {
+    font-size: 1rem;
+  }
+
+  .stats-container {
+    gap: 1rem;
+  }
+
+  .stat-item {
+    min-width: 140px;
+    padding: 1rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .trainer-section {
+    padding: 2rem 1rem;
+  }
+
+  .trainer-content {
+    flex-direction: column;
+  }
+
+  .trainer-image-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .contact-form-section {
+    padding: 2rem 1rem;
+  }
+
+  .trainer-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .launch-announcement {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .announcement-title {
+    font-size: 1.5rem;
+  }
+
+  .announcement-text {
+    font-size: 0.9rem;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-item {
+    width: 90%;
+  }
+
+  .trainer-heading {
+    font-size: 1.5rem;
+  }
+
+  .trainer-description {
+    font-size: 0.9rem;
+  }
+
+  .trainer-image-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .trainer-icon-large {
+    font-size: 5rem;
+  }
+
+  .trainer-icon-medium {
+    font-size: 3rem;
+    top: 30px;
+    right: 30px;
+  }
+
+  .trainer-icon-small {
+    font-size: 2rem;
+    left: 40px;
+    bottom: 40px;
+  }
+
+  .contact-form-title {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,206 @@
+/* Estilos para o formulário de contato dos profissionais */
+
+.contact-form-section {
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.contact-form-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark);
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.contact-form-title i {
+  color: var(--primary);
+  margin-right: 0.5rem;
+}
+
+.contact-form-title::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.form-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: var(--gray);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trainer-form {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.trainer-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--dark);
+  font-size: 1rem;
+}
+
+.trainer-form input[type="text"],
+.trainer-form input[type="email"],
+.trainer-form input[type="tel"],
+.trainer-form select,
+.trainer-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: var(--dark);
+  font-family: 'Inter', sans-serif;
+}
+
+.trainer-form input[type="text"]:focus,
+.trainer-form input[type="email"]:focus,
+.trainer-form input[type="tel"]:focus,
+.trainer-form select:focus,
+.trainer-form textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  background: white;
+}
+
+.trainer-form input::placeholder,
+.trainer-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-privacy input[type="checkbox"] {
+  margin-top: 0.3rem;
+}
+
+.form-privacy label {
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+.form-privacy a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.form-privacy a:hover {
+  text-decoration: underline;
+}
+
+.trainer-submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  color: white;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-size: 1.1rem;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.trainer-submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+}
+
+.trainer-submit-button i {
+  transition: transform 0.3s ease;
+}
+
+.trainer-submit-button:hover i {
+  transform: translateX(5px);
+}
+
+/* Estilos para indicador de carregamento */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.fa-spin {
+  animation: spin 1s infinite linear;
+}
+
+/* Estilos para campos de formulário com erro */
+.input-error {
+  border-color: #ef4444 !important;
+  background-color: rgba(239, 68, 68, 0.05) !important;
+}
+
+/* Mensagem de erro */
+.error-message {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.error-message.visible {
+  display: block;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contact-form-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .contact-form-title {
+    font-size: 1.5rem;
+  }
+  
+  .trainer-submit-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
