@@ -789,7 +789,63 @@ body {
   color: #4b5563;
   font-weight: 500;
   text-align: center;
-  line-height: 1.5;
+  position: relative;
+}
+
+/* Estilos para a tag NOVO */
+.new-tag {
+  background: linear-gradient(135deg, #ff6b6b, #ff4757);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 8px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+  animation: pulse-glow 2s infinite, new-feature 4s infinite;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+}
+
+.new-tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(255, 107, 107, 0.6);
+    transform: scale(1.08);
+  }
+}
+
+/* Animação adicional para destacar as novas funcionalidades */
+@keyframes new-feature {
+  0%, 100% {
+    background: linear-gradient(135deg, #ff6b6b, #ff4757);
+  }
+  50% {
+    background: linear-gradient(135deg, #ff4757, #ff6b6b);
+  }
 }
 
 /* Estilos para a saudação personalizada */
@@ -1044,13 +1100,6 @@ body {
   50% { border-color: #8b5cf6 }
 }
 
-@media (max-width: 768px) {
-  .chat-demo-container {
-    max-width: 90%;
-  }
-}
-
-/* Media Queries */
 @media (max-width: 900px) {
   .container {
     padding: 10px;

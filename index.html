@@ -243,6 +243,26 @@
             <div class="skill-icon" style="background: linear-gradient(135deg, #8b5cf6, #f43f5e);"><i class="fas fa-child"></i></div>
             <div class="skill-text">Pilates: Postura, Força e Consciência Corporal</div>
           </div>
+          <div class="skill-card">
+            <div class="skill-icon" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);"><i class="fas fa-fist-raised"></i></div>
+            <div class="skill-text">Kickboxing: Condicionamento e Defesa <span class="new-tag">NOVO</span></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon" style="background: linear-gradient(135deg, #4834d4, #686de0);"><i class="fas fa-home"></i></div>
+            <div class="skill-text">Treinos em Casa: Exercícios sem Equipamentos <span class="new-tag">NOVO</span></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon" style="background: linear-gradient(135deg, #ff9ff3, #f368e0);"><i class="fas fa-burn"></i></div>
+            <div class="skill-text">Treinos Abdominais: Core e Definição <span class="new-tag">NOVO</span></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon" style="background: linear-gradient(135deg, #0abde3, #006ba6);"><i class="fas fa-chair"></i></div>
+            <div class="skill-text">Exercícios com Cadeira: Mobilidade e Fortalecimento <span class="new-tag">NOVO</span></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon" style="background: linear-gradient(135deg, #ff6348, #ff4757);"><i class="fas fa-users"></i></div>
+            <div class="skill-text">Treinos de Dupla / Com Parceiro: Motivação em Conjunto <span class="new-tag">NOVO</span></div>
+          </div>
         </div>
       </div>
 
@@ -654,8 +674,11 @@
           { id: 'trainer-name', mensagem: 'Nome é obrigatório' },
           { id: 'trainer-email', mensagem: 'E-mail é obrigatório e deve ser válido', 
             validar: (valor) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor) },
-          { id: 'trainer-phone', mensagem: 'Telefone é obrigatório', 
-            validar: (valor) => valor.replace(/\D/g, '').length >= 10 },
+          { id: 'trainer-phone', mensagem: 'Telefone deve ter pelo menos 10 dígitos', 
+            validar: (valor) => {
+              const digitos = valor.replace(/\D/g, '');
+              return digitos.length >= 10 && digitos.length <= 11;
+            } },
           { id: 'trainer-specialty', mensagem: 'Selecione sua área de atuação' },
           { id: 'trainer-message', mensagem: 'Mensagem é obrigatória' }
         ];
@@ -752,10 +775,12 @@
           submitBtn.disabled = true;
           
           // Enviar dados para a API
-          fetch('https://workflow.billsign.app/webhook/b8c31146-a691-460c-8941-ee4d5bbca5bb', {
+          fetch('https://flow.codeandscale.com.br/webhook/b8c31146-a691-460c-8941-ee4d5bbca5bb', {
             method: 'POST',
+            mode: 'cors',
             headers: {
-              'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
               // Adicione o token de autorização se necessário
               // 'Authorization': 'Bearer seu-token-aqui'
             },
